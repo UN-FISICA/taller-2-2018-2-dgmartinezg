@@ -7,7 +7,7 @@ lado=20
 n =int(input("introdusca el numero de la base de la piramide:  ")) 
 p =int(input("introdusca el numero de lados del poligono: ")) 
 d=0
-for j in range(n): #este for controla la altura de la piramide
+for j in range(n): 
 	penup()
 	goto(1.25*d*lado,3*d*lado+3*d)
 	pendown()
@@ -21,6 +21,4 @@ for j in range(n): #este for controla la altura de la piramide
 	p=p-1   
 	n=n-1
 	d=d+1
-	if p==0:
-		exit()
 msvcrt.getch()
