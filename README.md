@@ -43,5 +43,24 @@ msvcrt.getch()
 
 Para compilar en ubunto o otro sistema, solo es quitar  *import msvcrt* y *msvcrt.getch()* y poner al final **raw_input()**
 ## Ejercicio3
-Con base en el ejercico anterior,para solicitar el numero de lados del poligono de alineacion se introdujo una variable nueva **p**
-que controla las coordenadas dentro del **goto()** esto lo que hace es que dependiendo del numero que se le introdusca redirecciona las coordenas y alli dibuja el poligono deseado.
+Con base en el ejercico anterior,para solicitar el número de lados del poligono de alineación, se introdujó una variable nueva **p**
+que controla las coordenadas dentro del **goto()** esto lo que hace es que dependiendo del número que se le introdusca redirecciona las coordenadas y allí dibuja el poligono deseado. 
+
+por ejemplo si se le introduce el número 5 lo que hace es divir la circunferencia en 5 partes iguales y empezando en 90 grados para que este alineado comienza a dibujar en cada lugar el poligono deseado.
+
+~~~
+from turtle import *
+import math as m
+import msvcrt
+lado=30
+n=int(input("introdusca el numero de lados del poligono de las puntas"))
+p=int(input("introdusca el numero de lados del poligo grande"))
+for i in range(p):
+	penup()
+	goto(100*m.cos((90+(360/p)*i)*(m.pi/180)),100*m.sin((90+(360/p)*i)*(m.pi/180)))
+	pendown()
+	for j in range(n):
+		forward(lado)
+		left(360/n)
+msvcrt.getch()
+~~~
