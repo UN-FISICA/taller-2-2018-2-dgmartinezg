@@ -42,3 +42,6 @@ msvcrt.getch()
 ~~~
 
 Para compilar en ubunto o otro sistema, solo es quitar  *import msvcrt* y *msvcrt.getch()* y poner al final **raw_input()**
+## Ejercicio3
+Con base en el ejercico anterior,para solicitar el numero de lados del poligono de alineacion se introdujo una variable nueva **p**
+que controla las coordenadas dentro del **goto()** esto lo que hace es que dependiendo del numero que se le introdusca redirecciona las coordenas y alli dibuja el poligono deseado.
