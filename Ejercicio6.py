@@ -11,11 +11,11 @@ for j in range(n):
 	penup()
 	goto(2*d*r,3*d*r+3*d)
 	pendown()
-	for i in range(n): #este for controla la repeticion en cada fila de la piramide
+	for i in range(n): 
 		penup()
 		forward(r*4)
 		pendown()
-		for k in range(p): #este for da forma a cada figura de la piramide
+		for k in range(p): 
 			forward(2*r*m.sin((180/p)*m.pi/180))
 			left(360/(p))      
 	p=p-1   
