@@ -130,9 +130,22 @@ msvcrt.getch()
 ~~~
 # Ejercicio6
 
-Para resolver el problema de que las figuras no estan en proporcion se utilizo el hecho que el lado de un polígono regular inscrito en una circunferencia de radio **r** esa dado por
+Para resolver el problema de que las figuras no estan en proporcion se utilizo el hecho que el lado **L** de un polígono regular inscrito en una circunferencia de radio **r** esa dado por
 
-$$y=x$$
+$$r=\frac{L}{2 \sin(\alpha/2)}$$
+
+despejando
+
+$$L= \frac{r}{2 \sin(\alpha/2)} $$
+
+entonces lo que se hizo fue tener encuenta esto para darle la longitud que debe tener cada lado en cada polígono. 
+
+~~~
+forward(2*r*m.sin((180/p)*m.pi/180))
+~~~
+
+De manera que el código toma la forma:
+
 ~~~~
 #!/usr/bin/python
 # -*- coding: utf8 -*-
